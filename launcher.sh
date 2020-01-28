@@ -3,7 +3,7 @@
 export https_proxy="http://proxy2:8080"
 export http_proxy="http://proxy2:8080"
 
-numsec=3600 # 1 ora 
+numsec=7200 # 2 ore 
 ./dqc_driver_recenti.sh
 sleep $numsec
 while [ 1 ]
