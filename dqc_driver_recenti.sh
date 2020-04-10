@@ -23,12 +23,12 @@ DMA_DV=DMA-DV.R
 # Tutte le tipologie
 echo "checkT1.sh `date` > START ------------------------------------------------------------------"
 rm -f $check_T1_log 
-$check_T1
+./$check_T1
 cat $check_T1_log 
 echo "checkT1.sh `date` >   END ------------------------------------------------------------------"
 echo "checkT2.sh `date` > START ------------------------------------------------------------------"
 rm -f $check_T2_log 
-$check_T2
+./$check_T2
 cat $check_T2_log 
 echo "checkT2.sh `date` >   END ------------------------------------------------------------------"
 #=========
