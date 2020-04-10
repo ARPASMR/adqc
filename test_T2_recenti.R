@@ -466,7 +466,7 @@ while(tip <= length(tipologia) ){
           indice_da_segnalare_02 <- which( seq(1:max(indice_da_segnalare_01,by=1)) %in% indice_da_segnalare_01  )
           stringa <- toString(paste(" (",dati$IDsensore[indice_da_segnalare_02], 
                                     ", '",as.character(dati$date_riformattate[indice_da_segnalare_02]),
-                                    "','", test[2],"','",fallimento_a, "','", Autore, "',",Data,")",sep=""))
+                                    "','", test[2],"','",fallimento_a, "','", Autore, "',",Data,",NULL)",sep=""))
           query_insert <- paste("insert into ",nome_tavola_DQC,
                                 " values ",stringa,
                                 " on duplicate key update  Result=values(Result), Autore=values(Autore), Data=values(Data)", sep="")
@@ -563,7 +563,7 @@ while(tip <= length(tipologia) ){
           indice_da_segnalare_02 <- which( seq(1:max(indice_da_segnalare_01,by=1)) %in% indice_da_segnalare_01  )
           stringa <- toString(paste(" (",dati$IDsensore[indice_da_segnalare_02], 
                                     ", '",as.character(dati$date_riformattate[indice_da_segnalare_02]),
-                                    "','", test[2],"','",fallimento_a, "','", Autore, "',",Data,")",sep=""))
+                                    "','", test[2],"','",fallimento_a, "','", Autore, "',",Data,",NULL)",sep=""))
           query_insert <- paste("insert into ",nome_tavola_DQC,
                                 " values ",stringa,
                                 " on duplicate key update  Result=values(Result), Autore=values(Autore), Data=values(Data)", sep="")
@@ -664,7 +664,7 @@ while(tip <= length(tipologia) ){
           indice_da_segnalare_02 <- which( seq(1:max(indice_da_segnalare_01,by=1)) %in% indice_da_segnalare_01  )
           stringa <- toString(paste(" (",dati$IDsensore[indice_da_segnalare_02], 
                                     ", '",as.character(dati$date_riformattate[indice_da_segnalare_02]),
-                                    "','", test[3],"','",fallimento_a, "','", Autore, "',",Data,")",sep=""))
+                                    "','", test[3],"','",fallimento_a, "','", Autore, "',",Data,",NULL)",sep=""))
           query_insert <- paste("insert into ",nome_tavola_DQC,
                                 " values ",stringa,
                                 " on duplicate key update  Result=values(Result), Autore=values(Autore), Data=values(Data)", sep="")
