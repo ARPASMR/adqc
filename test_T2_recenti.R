@@ -203,8 +203,8 @@ while(tip <= length(tipologia) ){
   if (tipologia[tip] == "Termometri")    fallimento_a <- "F"
 
   if (tipologia[tip] == "Igrometri") {
-                                         fallimento_a <- "F"
-                                         fallimento_b <- "F"
+                                         fallimento_a <- "S"
+                                         fallimento_b <- "S"
                                          fallimento_c <- "S"
   }
 
