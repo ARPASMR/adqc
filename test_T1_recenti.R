@@ -139,7 +139,7 @@ drv<-dbDriver("MySQL")
 
 #apro connessione con il db descritto nei parametri del gruppo "DQC"
 #nel file "/home/swiluppo/.my.cnf
-conn<-try(dbConnect(drv, user=as.character(Sys.getenv("MYSQL_USR")), password=as.character(Sys.getenv("MYSQL_PWD")), dbname=as.character(Sys.getenv("MYSQL_DBNAME")), host=as.character(Sys.getenv("MYSQL_HOST"))))
+conn<-try(dbConnect(drv, user=as.character(Sys.getenv("MYSQL_USR")), password=as.character(Sys.getenv("MYSQL_PWD")), dbname=as.character(Sys.getenv("MYSQL_DBNAME")), host=as.character(Sys.getenv("MYSQL_HOST")),port=as.numeric(Sys.getenv("MYSQL_PORT"))))
 
 #___________________________________________________
 # ciclo sulle tipologie di sensori

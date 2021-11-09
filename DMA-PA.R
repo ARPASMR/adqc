@@ -62,7 +62,7 @@ cat("collegamento al DB\n",file=file_log,append=T)
 #definisco driver
 drv<-dbDriver("MySQL")
 #apro connessione con il db 
-conn<-try(dbConnect(drv, user=as.character(Sys.getenv("MYSQL_USR")), password=as.character(Sys.getenv("MYSQL_PWD")), dbname=as.character(Sys.getenv("MYSQL_DBNAME")), host=as.character(Sys.getenv("MYSQL_HOST"))))
+conn<-try(dbConnect(drv, user=as.character(Sys.getenv("MYSQL_USR")), password=as.character(Sys.getenv("MYSQL_PWD")), dbname=as.character(Sys.getenv("MYSQL_DBNAME")), host=as.character(Sys.getenv("MYSQL_HOST")),port=as.numeric(Sys.getenv("MYSQL_PORT"))))
 #___________________________________________________
 # ciclo sulle tipologie di sensori
 #___________________________________________________
