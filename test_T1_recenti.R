@@ -175,7 +175,7 @@ while(tip < length(tipologia) + 1){
   cat ( " eseguo test  \n" , file = file_log , append = TRUE )
   differenza_misura  <- abs(diff(dati$Misura))
   differenza_sensore <- abs(diff(dati$IDsensore))
-  differenza_ore     <- as.integer(diff(dati$date_riformattate))
+  differenza_ore     <- as.integer(diff(as.POSIXct(strptime(dati$date_riformattate , format="%Y/%m/%d %H:%M"),"UTC")))
   mesi  <- as.integer(substr(dati$date_riformattate[2:length(dati$date_riformattate)],6,7))
   
   salto_di_ore       <- which(differenza_ore!=1)
