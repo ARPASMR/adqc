@@ -214,7 +214,7 @@ while(tip < length(tipologia) + 1){
 
 ## insert in DQC 
 #" 3-memorizzo record del data.frame da segnalare
-  Autore <- "test_T1_recenti.R"
+  Autore <- "test_T1_recenti"
 # maria 18marzo, specifico le ore nell inserimento del record
 #  Data   <- paste("'", as.character(Sys.Date()),"'", sep="")
   Data   <- paste("'", as.character(Sys.time()),"'", sep="")
