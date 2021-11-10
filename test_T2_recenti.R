@@ -269,8 +269,8 @@ while(tip <= length(tipologia) ){
     differenza_misura  <- diff(dati$Misura)
     if (tipologia[tip] == "AnemometriDV") differenza_misura<-min(differenza_misura,360-differenza_misura)  
     differenza_sensore <- abs(diff(dati$IDsensore))
-    differenza_ore     <- as.integer(diff(dati$date_riformattate))
-#
+    differenza_ore     <- as.integer(diff(as.POSIXct(strptime(dati$date_riformattate , format="%Y/%m/%d %H:%M"),"UTC")))
+    #
     salto_di_ore       <- NULL 
     cambio_sensore     <- NULL 
     salto_di_ore       <- which(differenza_ore!=1)
@@ -398,8 +398,8 @@ while(tip <= length(tipologia) ){
 #  dati 1...N  //  differenza_XXX 1...(N-1)  //  differenza(i)=dati(i+1)-dati(i) 
       differenza_misura  <- diff(dati$Misura)
       differenza_sensore <- abs(diff(dati$IDsensore))
-      differenza_ore     <- as.integer(diff(dati$date_riformattate))
-
+      differenza_ore     <- as.integer(diff(as.POSIXct(strptime(dati$date_riformattate , format="%Y/%m/%d %H:%M"),"UTC")))
+      
       salto_di_ore       <- NULL 
       cambio_sensore     <- NULL 
       salto_di_ore       <- which(differenza_ore!=1)
@@ -488,7 +488,7 @@ while(tip <= length(tipologia) ){
 #  dati 1...N  //  differenza_XXX 1...(N-1)  //  differenza(i)=dati(i+1)-dati(i) 
       differenza_misura  <- diff(dati$Misura)
       differenza_sensore <- abs(diff(dati$IDsensore))
-      differenza_ore     <- as.integer(diff(dati$date_riformattate))
+      differenza_ore     <- as.integer(diff(as.POSIXct(strptime(dati$date_riformattate , format="%Y/%m/%d %H:%M"),"UTC")))
 
       salto_di_ore       <- NULL 
       cambio_sensore     <- NULL 
@@ -594,7 +594,7 @@ while(tip <= length(tipologia) ){
 #  dati 1...N  //  differenza_XXX 1...(N-1)  //  differenza(i)=dati(i+1)-dati(i) 
       differenza_misura  <- diff(dati$Misura)
       differenza_sensore <- abs(diff(dati$IDsensore))
-      differenza_ore     <- as.integer(diff(dati$date_riformattate))
+      differenza_ore     <- as.integer(diff(as.POSIXct(strptime(dati$date_riformattate , format="%Y/%m/%d %H:%M"),"UTC")))
 
       salto_di_ore       <- NULL 
       cambio_sensore     <- NULL 
