@@ -250,7 +250,7 @@ while(tip <= length(tipologia) ){
   }
 #
   cat ( " eseguo i tests  \n" , file = file_log , append = TRUE )
-  Autore <- "test_T2_recenti.R"
+  Autore <- "test_T2_recenti"
 #  Data   <- paste("'", as.character(Sys.Date()),"'", sep="")
   Data   <- paste("'", as.character(Sys.time()),"'", sep="")
 
